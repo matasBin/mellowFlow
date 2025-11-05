@@ -10,8 +10,8 @@ function App() {
 
     return (
         <div className="App">
-            <div className={"w-screen h-screen bg-gray-200 flex items-center justify-center"}>
-                <div className={"w-[375px] h-[640px] bg-[#F9F6F4] relative overflow-hidden shadow-2xl pb-5 pr-5 pl-5"}>
+            <div className={"w-screen h-screen bg-gray-200 flex items-center justify-center font-sans"}>
+                <div className={"w-[375px] h-[640px] bg-[#F9F6F4] relative overflow-hidden shadow-2xl pb-5 pr-5 pl-5 flex flex-col gap-8"}>
                     <BrowserRouter>
                         <TopBar/>
                         <Routes>
