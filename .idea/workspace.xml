@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95c8afd3-5a07-426c-8804-12b603ef43e0" name="Changes" comment="" />
+    <list default="true" id="95c8afd3-5a07-426c-8804-12b603ef43e0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +38,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/binge/WebstormProjects/TechAssignment/front/src/images/lightSvg",
+    "last_opened_file_path": "C:/Users/binge/WebstormProjects/TechAssignment/front/src/images/checkoutImages",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,10 +50,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\binge\WebstormProjects\TechAssignment\front\src\images\lightSvg" />
+      <recent name="C:\Users\binge\WebstormProjects\TechAssignment\front\src\images\checkoutImages" />
+      <recent name="C:\Users\binge\WebstormProjects\TechAssignment\front\src\images\buttonSvg" />
       <recent name="C:\Users\binge\WebstormProjects\TechAssignment\front\src\images" />
+      <recent name="C:\Users\binge\WebstormProjects\TechAssignment\front\src\images\lightSvg" />
+      <recent name="C:\Users\binge\WebstormProjects\TechAssignment\front\src\images\darkSvg" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\binge\WebstormProjects\TechAssignment\front\src\images\buttonSvg" />
       <recent name="C:\Users\binge\WebstormProjects\TechAssignment\front\src\images\darkSvg" />
       <recent name="C:\Users\binge\WebstormProjects\TechAssignment\front\src\fonts" />
     </key>
@@ -72,7 +78,7 @@
       <updated>1762290633210</updated>
       <workItem from="1762290634243" duration="5338000" />
       <workItem from="1762300062344" duration="24000" />
-      <workItem from="1762343117942" duration="24846000" />
+      <workItem from="1762343117942" duration="41787000" />
     </task>
     <servers />
   </component>

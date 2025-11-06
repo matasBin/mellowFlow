@@ -3,27 +3,30 @@ import {create} from 'zustand'
 interface AppStore {
     gender: string;
     quizStart: boolean;
+    quizEnd: boolean;
     currentQuestionIndex: number;
     answers: string[]
 
     setGender: (newGender: string) => void;
     setQuizStart: (newQuizStart: boolean) => void;
+    setQuizEnd: (newQuizEnd: boolean) => void;
     setAnswer: (answer: string) => void;
     nextQuestion: () => void;
     prevQuestion: () => void;
+
 }
 
 export const useAppStore = create<AppStore>((set, get) => ({
-
     gender: '',
     quizStart: false,
+    quizEnd: false,
 
     currentQuestionIndex: 0,
     answers: ['', '', '', '', '', ''],
 
     setGender: (newGender: string) => set({gender: newGender}),
     setQuizStart: (newQuizStart: boolean) => set({quizStart: newQuizStart}),
-    setCurrentQuestionIndex: (newCurrentQuestionIndex: number) => set({currentQuestionIndex: newCurrentQuestionIndex}),
+    setQuizEnd: (newQuizEnd: boolean) => set({quizEnd: newQuizEnd}),
 
     /*Function that saves an answer for the current question*/
     setAnswer: (answer: string) => {
@@ -40,6 +43,7 @@ export const useAppStore = create<AppStore>((set, get) => ({
         const {currentQuestionIndex} = get();
         if (currentQuestionIndex < 6) {
             set({currentQuestionIndex: currentQuestionIndex + 1})
+        } else if (currentQuestionIndex > 6) {
         }
     },
 
@@ -61,32 +65,3 @@ export const useAppStore = create<AppStore>((set, get) => ({
 
 
 }))
-
-
-
-
-
-
-/*
-type Gender = {
-    gender: string;
-    setGender: (newGender: string) => void;
-}
-
-type QuizStart = {
-    quizStart: boolean;
-    setQuizStart: (newQuizStart: boolean) => void;
-}
-
-const genderStore = create<Gender>((set) => ({
-    gender: "",
-    setGender: (newGender) => set({gender: newGender})
-}))
-
-const quizStartStore = create<QuizStart>((set) => ({
-    quizStart: false,
-    setQuizStart: (newQuizStart) => set({quizStart: newQuizStart})
-    })
-)
-
-export {genderStore, quizStartStore}*/

@@ -4,14 +4,16 @@ import LandingPage from "./pages/LandingPage";
 import QuizPage from "./pages/QuizPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import TopBar from "./components/TopBar";
+import {useAppStore} from "./store/allStates";
 
 function App() {
 
+    const {quizEnd} = useAppStore()
 
     return (
         <div className="App">
             <div className={"w-screen h-screen bg-gray-200 flex items-center justify-center font-sans"}>
-                <div className={"w-[375px] h-[640px] bg-[#F9F6F4] relative overflow-hidden shadow-2xl pb-5 pr-5 pl-5 flex flex-col gap-8"}>
+                <div className={`w-full h-full bg-[#F9F6F4] relative overflow-hidden shadow-2xl ${quizEnd ? "p-0" : "pb-5 pr-5 pl-5 gap-8"}  flex flex-col `}>
                     <BrowserRouter>
                         <TopBar/>
                         <Routes>

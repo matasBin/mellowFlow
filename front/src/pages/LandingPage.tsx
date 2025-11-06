@@ -19,7 +19,7 @@ const LandingPage = () => {
     }
 
     return (
-        <div className={"LandingPage flex flex-col h-full w-[335px] gap-6"}>
+        <div className={"LandingPage flex flex-col h-full w-full gap-6"}>
             <header className={"flex flex-col items-center gap-3"}>
                 <h1 className={"font-semibold text-2xl text-[#303030] leading-7 text-center"}>What is your gender?</h1>
                 <p className={"font-normal text-[14px] leading-[18px] text-[#303030] text-center"}>We will use this to personalize
