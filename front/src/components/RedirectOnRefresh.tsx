@@ -8,24 +8,25 @@ function RedirectOnRefresh() {
     useEffect(() => {
         let isReload = false;
 
-        // Try the modern API first
         try {
             const navEntries = performance.getEntriesByType("navigation") as PerformanceNavigationTiming[];
             const navType = navEntries?.[0]?.type;
             if (navType === "reload") {
                 isReload = true;
             }
-        } catch (err) {
-            // ignore — some browsers don't support it
+        } catch {
+            // ignore errors for unsupported browsers
         }
 
-        // Fallback for older browsers / mobile Safari
+        // Old mobile fallback
         if (!isReload && (window.performance as any)?.navigation?.type === 1) {
             isReload = true;
         }
 
-        if (isReload) {
-            navigate("/", { replace: true });
+        // ✅ Only redirect if it was a reload AND not already on "/"
+        if (isReload && location.pathname !== "/") {
+            // Delay the navigation slightly to ensure Router is mounted
+            setTimeout(() => navigate("/", { replace: true }), 50);
         }
     }, [location, navigate]);
 
