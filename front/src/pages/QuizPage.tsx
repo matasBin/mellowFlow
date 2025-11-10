@@ -38,11 +38,12 @@ const QuizPage = () => {
 
     return (
         <div className={"QuizPage flex flex-col items-center gap-6 h-full"}>
-            <header className={""}>
+            <header >
                 <h1 className={"font-semibold text-[24px] leading-7 text-[#303030] text-center"}>{currentQuestion.text}</h1>
             </header>
 
             <main className={"flex flex-1 flex-col justify-end h-full w-full gap-[8px]"}>
+                {/*Cia geriau renderinga pakeist nuo type kaip pvz sukurti type yes-no/ multichoise*/}
                 {currentQuestionIndex >= 2 ? (
 
                     <>

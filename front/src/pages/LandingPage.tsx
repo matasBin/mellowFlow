@@ -1,6 +1,6 @@
 import React from 'react';
-import maleImage from "../images/MaleImg.svg"
-import femaleImage from "../images/FemaleImg.svg"
+import maleImage from "../images/maleImg.png"
+import femaleImage from "../images/femaleImg.png"
 import {useNavigate} from "react-router-dom";
 import {useAppStore} from "../store/allStates";
 

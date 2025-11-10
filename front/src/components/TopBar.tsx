@@ -27,6 +27,8 @@ const TopBar = () => {
 
 
     /*quizstart = 73px, quizEnd = 76px, else = 60px*/
+
+    /*change the assigned gender variable to be more readable, and document it for clarity*/
     return (
         <div className={`TopBar w-full ${quizStart ? "h-[73px]" : quizEnd ? "h-[76px] bg-[#FFC633] p-5" : "h-[60px]"} pt-6`}>
 
