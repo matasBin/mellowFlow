@@ -12,8 +12,8 @@ function App() {
 
     return (
         <div className="App">
-            <div className={"w-screen h-screen bg-gray-200 flex items-center justify-center font-sans"}>
-                <div className={`w-full h-full bg-[#F9F6F4] relative overflow-hidden shadow-2xl ${quizEnd ? "p-0" : "pb-5 pr-5 pl-5 gap-8"}  flex flex-col `}>
+            <div className={"w-screen h-screen flex items-center justify-center font-sans"}>
+                <div className={`w-full h-full bg-[#F9F6F4] relative ${quizEnd ? "p-0" : "pb-5 pr-5 pl-5 gap-8"}  flex flex-col `}>
                     <BrowserRouter>
                         <TopBar/>
                         <Routes>

@@ -6,7 +6,7 @@ import CheckoutAnalytics from "../components/CheckoutAnalytics";
 
 const CheckoutPage = () => {
     return (
-        <div className={"CheckoutPage flex flex-col pt-10 pb-[20px] gap-6"}>
+        <div className={"CheckoutPage bg-[#F9F6F4] flex flex-col px-5 pt-10 pb-[20px] gap-6"}>
             <header>
                 <h1 className={"font-bold text-[24px] leading-[28px]"}>Your personalized Alcohol-Free Plan is ready!</h1>
             </header>
