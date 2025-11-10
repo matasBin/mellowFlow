@@ -6,11 +6,25 @@ function RedirectOnRefresh() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Safely cast to PerformanceNavigationTiming[]
-        const navEntries = performance.getEntriesByType("navigation") as PerformanceNavigationTiming[];
-        const navType = navEntries[0]?.type;
+        let isReload = false;
 
-        if (navType === "reload") {
+        // Try the modern API first
+        try {
+            const navEntries = performance.getEntriesByType("navigation") as PerformanceNavigationTiming[];
+            const navType = navEntries?.[0]?.type;
+            if (navType === "reload") {
+                isReload = true;
+            }
+        } catch (err) {
+            // ignore — some browsers don't support it
+        }
+
+        // Fallback for older browsers / mobile Safari
+        if (!isReload && (window.performance as any)?.navigation?.type === 1) {
+            isReload = true;
+        }
+
+        if (isReload) {
             navigate("/", { replace: true });
         }
     }, [location, navigate]);
