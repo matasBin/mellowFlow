@@ -4,20 +4,22 @@ import QuizPage from "./pages/QuizPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import TopBar from "./components/TopBar";
 import {useAppStore} from "./store/allStates";
+import RedirectOnRefresh from "./components/RedirectOnRefresh";
 
 function App() {
 
-    const {quizEnd} = useAppStore();
+    const {quizEnd, quizStart} = useAppStore();
 
     return (
         <div className="App">
             <div className={"w-screen h-screen flex items-center justify-center font-sans"}>
                 <div className={`w-full h-full bg-[#F9F6F4] relative ${quizEnd ? "p-0" : "pb-5 pr-5 pl-5 gap-8"}  flex flex-col `}>
                     <BrowserRouter>
+                        <RedirectOnRefresh/>
                         <TopBar/>
                         <Routes>
                             <Route path={"/"} element={<LandingPage/>}/>
-                            <Route path={"/quiz"} element={<QuizPage/>}/>
+                            <Route path={"/quiz"} element={quizStart ? <QuizPage/> : <LandingPage/>}/>
                             <Route path={"/checkout"} element={<CheckoutPage/>}/>
                         </Routes>
                     </BrowserRouter>

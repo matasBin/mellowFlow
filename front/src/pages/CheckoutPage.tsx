@@ -14,7 +14,7 @@ const CheckoutPage = () => {
                 <div className={"border-r-[1px] border-[#767AF9]"}>
                     <div className={"flex gap-2 items-center"}>
                         <img className={"p-[4px] border-[1px] bg-[#F4F4FF] border-[#767AF9] rounded-[4px]"} src={brain} alt="brainImage"/>
-                        <p className={"font-normal text-[10px] leading-[12px]"}>Drinking patterns <span className={"font-bold text-[12px] leading-[14px]"}>Imbalanced</span></p>
+                        <p className={"font-normal text-[10px] leading-[12px]"}>Drinking patterns <br/><span className={"font-bold text-[12px] leading-[14px]"}>Imbalanced</span></p>
                     </div>
                 </div>
                 <div>
