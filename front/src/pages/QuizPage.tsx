@@ -1,14 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {useAppStore} from "../store/allStates";
 import {quizData} from "../data/quizData";
 import {useNavigate} from "react-router-dom";
 
 const QuizPage = () => {
 
-    const {currentQuestionIndex, answers, setAnswer, nextQuestion, setQuizStart, setQuizEnd} = useAppStore()
+    const {currentQuestionIndex, setAnswer, nextQuestion, setQuizStart, setQuizEnd} = useAppStore()
 
     const currentQuestion = quizData[currentQuestionIndex]
-    const currentAnswer = answers[currentQuestionIndex]
     const [selected, setSelected] = useState<string>("")
     const navigate = useNavigate()
 
