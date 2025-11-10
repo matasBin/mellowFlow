@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useAppStore} from "../store/allStates";
 import {quizData} from "../data/quizData";
 import {useNavigate} from "react-router-dom";

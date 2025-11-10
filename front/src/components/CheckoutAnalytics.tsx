@@ -3,7 +3,6 @@ import lightbulb from "../images/checkoutImages/svg/lightbulb.svg"
 import circle from "../images/checkoutImages/svg/circle.svg"
 import stop from "../images/checkoutImages/svg/stop.svg"
 import thunder from "../images/checkoutImages/svg/thunder.svg"
-import brain from "../images/checkoutImages/svg/brain.svg";
 
 const CheckoutAnalytics = () => {
     return (

@@ -24,9 +24,6 @@ const TopBar = () => {
 
     }
 
-    let stage = ""
-
-
     /*quizstart = 73px, quizEnd = 76px, else = 60px*/
 
     /*change the assigned gender variable to be more readable, and document it for clarity*/
