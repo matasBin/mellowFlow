@@ -29,13 +29,6 @@ const QuizPage = () => {
 
     }
 
-    useEffect(() => {
-        console.log(currentAnswer)
-        console.log(answers)
-        console.log(currentQuestionIndex)
-    }, [answers])
-
-
     return (
         <div className={"QuizPage flex flex-col items-center gap-6 h-full"}>
             <header >
