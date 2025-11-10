@@ -15,7 +15,7 @@ const CheckoutAnalytics = () => {
                 <div className="results flex flex-col gap-[8px]">
                     <div className={"infoBox px-[12px] py-[16px] flex gap-[12px] rounded-[8px] border-[1px] border-[#767AF9]"}>
                         <div className={"icon w-[40px] h-[40px] flex"}>
-                            <img className={"p-[4px] border-[1px] bg-[#F4F4FF] border-[#767AF9] rounded-[4px]"} src={thunder} alt="brainImage"/>
+                            <img className={"p-[4px] border-[1px] bg-[#F4F4FF] border-[#767AF9] rounded-[4px]"} src={lightbulb} alt="brainImage"/>
                         </div>
                         <div className={"info flex flex-1 gap-[10px] items-center"}>
                             <div className="text flex flex-1 flex-col gap-[4px] ">

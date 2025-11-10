@@ -8,7 +8,7 @@ const CheckoutPage = () => {
     return (
         <div className={"CheckoutPage bg-[#F9F6F4] flex flex-col px-5 pt-10 pb-[20px] gap-6"}>
             <header>
-                <h1 className={"font-bold text-[24px] leading-[28px]"}>Your personalized Alcohol-Free Plan is ready!</h1>
+                <h1 className={"font-bold text-[#303030] text-[24px] leading-[28px]"}>Your personalized Alcohol-Free Plan is ready!</h1>
             </header>
             <div className="result grid grid-cols-2 h-[43px]">
                 <div className={"border-r-[1px] border-[#767AF9]"}>

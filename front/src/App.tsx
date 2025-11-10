@@ -1,4 +1,3 @@
-import React from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import QuizPage from "./pages/QuizPage";
@@ -8,7 +7,7 @@ import {useAppStore} from "./store/allStates";
 
 function App() {
 
-    const {quizEnd} = useAppStore()
+    const {quizEnd} = useAppStore();
 
     return (
         <div className="App">

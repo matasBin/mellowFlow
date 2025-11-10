@@ -4,6 +4,7 @@ import backArrow from '../images/backArrow.svg'
 import {useAppStore} from "../store/allStates";
 import {useNavigate} from "react-router-dom";
 import ProgressBar from "./ProgressBar";
+import Timer from "./Timer";
 
 const TopBar = () => {
 
@@ -50,7 +51,7 @@ const TopBar = () => {
                     (
                         <div className={" flex justify-between items-center bg-[#FFC633]"}>
                             <img src={logo} alt="Mellow Flow Logo"/>
-                            <p className={"font-bold text-[18px] text-[#303030] leading-[22px] flex items-center gap-2.5"}>Reserved price for: <span className={"text-[#6A61F1] font-bold text-[24px] text-center"}>14:59</span></p>
+                            <p className={"font-bold text-[18px] text-[#303030] leading-[22px] flex items-center gap-2.5"}>Reserved price for: <span className={"text-[#6A61F1] font-bold w-[61px] text-[24px] text-center"}><Timer/></span></p>
                         </div>
                     )
             }
