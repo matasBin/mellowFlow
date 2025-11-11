@@ -1,11 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function RedirectOnRefresh() {
     const location = useLocation();
     const navigate = useNavigate();
+    const checkedOnce = useRef(false); // 🧠 only run once on first load
 
     useEffect(() => {
+        if (checkedOnce.current) return; // Prevent running again on normal navigation
+        checkedOnce.current = true;
+
         let isReload = false;
 
         try {
@@ -23,9 +27,8 @@ function RedirectOnRefresh() {
             isReload = true;
         }
 
-        // ✅ Only redirect if it was a reload AND not already on "/"
+        // ✅ Only redirect on refresh AND if not already at "/"
         if (isReload && location.pathname !== "/") {
-            // Delay the navigation slightly to ensure Router is mounted
             setTimeout(() => navigate("/", { replace: true }), 50);
         }
     }, [location, navigate]);
