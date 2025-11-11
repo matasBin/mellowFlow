@@ -10,7 +10,7 @@ import {useAppStore} from "../store/allStates";
     - Starts quiz and navigates to /quiz
 */
 const LandingPage = () => {
-    const {gender, setGender, setQuizStart} = useAppStore()
+    const {setGender, setQuizStart} = useAppStore()
     const navigate = useNavigate()
 
     const assignGender = (gender: string) => {
